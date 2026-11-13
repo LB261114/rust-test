@@ -7,7 +7,9 @@ Rust 初心者、Windows API 初心者を対象としています。<br>
 しかし、現時点では、Rust で GUI を簡単に扱う方法を **摸索している段階** です。<br>
 Rust には継承がないので、継承を用いずに GUI をうまく扱う方法を見つけたいです。
 
-## GTK などのライブラリを用いていない理由
+<img width="1262" height="1143" alt="screen" src="https://github.com/user-attachments/assets/8953af4c-f5b0-4ccd-b757-8d61b17be65b" />
+
+## GTK などのライブラリを用いていない理由<br>（GTK等を利用していない理由をよく聞かれるため、書いておきます^^;）
 最初は GTK を利用して開発を始めました。GTK はよく整備されているライブラリであるため、大変使いやすいです。<br>
 しかし、以下のことが問題に感じるようになり、GTK の採用は断念しました。iced を利用しても結局は同じ問題に突き当たり、iced の採用も断念するに至りました。
 
@@ -20,3 +22,53 @@ GTK はライブラリが大きいこともあり、数行書きかえただけ�
 私の利用目的は「分析値変更、即時チャート表示、チェックしたいところまで即スクロールして確認」というものです。<br>
 しかし、GTK はマルチプラットフォーム用であるためだろうと思いますが、表示、スクロールがもっさりとなってしまい、分析入力値を少しずつ変更して再表示させることに苦痛を感じました。この問題は、GPUI を採用したら改善できると思っていますが、まだ試していません。
 
+## Rust を使ったことない人は、以下の手順を試してみてください
+
+### <ins> Windows に Rust をインストール</ins>
+Windows の場合、インストールは３段階に分かれます。
+
+1. **Visual Studio をインストール**
+- C コンパイラ等をインストールするためです。
+2. **Rust コンパイラをインストール**
+
+3. **Visual Studio Code をインストール**（省略可）
+- 上記の Visual Studio と名前が似ていてややこしいですが、Visual Studio Code はコード作成支援機能を持つテキストエディタです。<br>
+自分の好きなテキストエディタがあれば、これはインストールしなくても問題ないです。
+
+上記の手順は、以下のMicorsoft 公式のページを参考にしてインストールするのが一番簡単だと思います。<br>
+https://learn.microsoft.com/ja-jp/windows/dev-environment/rust/setup
+
+### <ins> Cargo を試しに使ってみる </ins>
+
+TODO：cargo の詳細は後で書く
+
+以下のコマンドを実行してみてください。
+
+```
+> cargo init rust-test
+> cd rust-test
+> cargo run
+```
+
+`Hello, world!` と表示されたらＯＫ！。
+
+### <ins> Rust の update を試しにしてみる </ins>
+
+最新バージョンがインストールされていると思うので何も update されませんが、update の方法を知っておくと便利です。
+
+rustup の update
+```
+$ rustup self update
+```
+
+Rust の update
+```
+$ rustup update stable
+```
+
+バージョン確認
+```
+$ rustup -V
+$ rustc -V
+$ cargo -V
+```
