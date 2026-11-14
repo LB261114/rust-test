@@ -78,6 +78,4 @@ $ cargo -V
 
 ---
 
-次のページ -> [最初の簡単なプログラム](https://github.com/LB261114/rust-test/blob/main/010_最初の簡単なプログラム.md)
-
-　
+次のページ -> [最初の簡単なプログラム](https://github.com/LB261114/rust-test/blob/main/text/010_最初の簡単なプログラム.md)
