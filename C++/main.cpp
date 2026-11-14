@@ -6,9 +6,9 @@ int APIENTRY wWinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPWSTR lpCmdLine, in
     
 		// New_OL_Wnd_Wp() は、メモリ内にオブジェクトを生成するのみで、ウィンドウリソース等は生成しない
 		// Crt_WndRsc() で、ウィンドウリソースが生成される
-		factory_KOL_MainWnd.New_OL_Wnd_Wp
-      ->Crt_WndRsc(KOL_Wnd_Pos{ 950, 2180 })
-      ->Show_Wnd();
+		factory_MainWnd.New_OL_Wnd_Wp()
+			->Crt_WndRsc(KOL_Wnd_Pos{ 50, 50 })
+			->Show_Wnd();
     
 		// ----------------------------------------------------
 		for (MSG msg; GetMessage(&msg, NULL, 0, 0); )
