@@ -61,19 +61,19 @@ TODO：cargo の詳細は後で書く
 
 rustup の update
 ```
-$ rustup self update
+> rustup self update
 ```
 
 Rust の update
 ```
-$ rustup update stable
+> rustup update stable
 ```
 
 バージョン確認
 ```
-$ rustup -V
-$ rustc -V
-$ cargo -V
+> rustup -V
+> rustc -V
+> cargo -V
 ```
 
 ---
